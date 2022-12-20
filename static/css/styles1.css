@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(discount-item-3.png);
+    background-size: 100% 100vh;
+}
+
+.container{
+    position: inherit;
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgba(34, 34, 34, 0.342);
+}
+
+.container .form{
+    padding: 50px;
+}
+
+.container .form .title{
+    position: relative;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 292px;
+    background-color: #FFB30E;
+    border-radius: 30px;
+}
+.form .input-field{
+    background-color: rgb(228, 244, 253);
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color:  #FFB30E;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+}
+
+.input-field input:is(:focus, :valid){
+    color:  #FFB30E;
+}
+
+.input-field i.icon{
+    left: 0;
+}
+
+.input-field i.showHidePw{
+    right: 0;
+}
+
+.form .checkbox-text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin: 0 8px -2px 4px;
+    accent-color: #FFB30E;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+.form a.text{
+    color: #FFB30E;
+    text-decoration: none;
+}
+
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button input{
+        border: none;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        background-color: #FFB30E;
+        cursor: pointer;
+        transition: all 0.3s ease;
+}
+
+.button input:hover{
+      background-color: #FFB30E;
+}
+
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
