@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="footer, address, phone, icons" />
+    <link rel="icon" type="image/x-icon" href="/images/img/order.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>DFn</title>
@@ -20,17 +21,16 @@
 <body>
     
     <nav class="main_nav navbar navbar-expand-lg bg-lightd-flex ">
-        <div class="container-fluid">
+        <div class="container-fluid"+>
             <ul class="row mt-2 d-flex" >
                 <li class="logo">
                     <a href="{% url 'home' %}">Daily-food</a>
                 </li>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                    <button type="button" class="btn btn-outline-primary">Accueil</button>
                 <li>
-                    <button type="button" class="btn btn-outline-primary panier">Panier (0) </button>
+                    <button type="button" class="btn btn-outline-primary">Accueil</button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-outline-primary panier">Panier (0)</button>
                 </li>
                 <li>
                     <button type="button" class="btn btn-outline-primary">Categorie</button>
@@ -42,11 +42,15 @@
                     <button class="btn btn-outline-success mr-2" type="submit">Recherche</button>
 
                     {% if user.is_authenticated %}
+                        <div class="btn btn-success btn-circle btn-xl mr-2 ml-2">
+                        <i class="fa fa-user"></i>
                         {{ user.username }}
+                        </div>
                         <a href="{% url 'logout' %}"><button type="button" class="btn btn-success mr-4 ml-2"><i class="fa fa-sign-out" aria-hidden="true"></i></button></a>
                     {% else %}
-                        <a href="{% url 'login' %}"><button type="button" class="btn btn-success mr-4 ml-2"><i class="fa fa-connectdevelop" aria-hidden="true"></i></button></a>
-                        <a href="{% url 'signup' %}"><button type="button" class="btn btn-success mr-4 ml-2"><i class="fa fa-sign-in" aria-hidden="true"></i></button></a>
+                        <a href="{% url 'signup' %}"><button type="button" class="btn btn-success mr-2 ml-2"><i class="fa fa-sign-in" aria-hidden="true"></i></button></a>
+                        <a href="{% url 'login' %}"><button type="button" class="btn btn-success mr-4 ml-2"><i class="fa fa-user " aria-hidden="true"></i></button></a>
+                        
                     {% endif %}
                 </form>
             </div>

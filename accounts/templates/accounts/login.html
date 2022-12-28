@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="p-5 mt-5 align-center " >
-<form method="post">
+<div class="p-5 mt-5 pl-5 pl-5 pl-5 align-center " >
+<form class="allign-center" method="post">
     {% csrf_token %}
     <p>
         <label for="username">User Name</label>
@@ -13,7 +13,10 @@
         <label for="password">Mot de passe</label>
         <input type="text" name="password" id="password">
     </p>
-    <button type="submit">connexion</button>
+    <div class="flex">
+        <button type="submit">connexion</button>
+        <a href="{% url 'signup' %}">pas de compte ?</a>
+    </div>
 
 </form>
 </div>

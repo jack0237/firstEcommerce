@@ -31,17 +31,17 @@
  
     <div class="row fluid container-fluid ">
         {% for product in product_object %}
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{{ product.image }} " alt="" class="card-img-top ">
-                <div class="card-body">
-                    <div id="aa{{ product.id }}" class="card-title">{{ product.title }}</div>
-                    <div style="color:rgb(163, 161, 161)" class="card-text">${{ product.price }}</div>
-                    <a href="{{ product.id }}" class="btn btn-warning">Voire</a> <!-- to get the isd and call the id fonction -->
-                    <button id="{{ product.id }}" class="btn plus1 btn-success"> Ajoter</button>
-                </div>
-            </div>  
-        </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{{ product.image }} " alt="" class="card-img-top ">
+                    <div class="card-body">
+                        <div id="aa{{ product.id }}" class="card-title">{{ product.title }}</div>
+                        <div style="color:rgb(163, 161, 161)" class="card-text">${{ product.price }}</div>
+                        <a href="{{ product.id }}" class="btn btn-warning">Voire</a> <!-- to get the id and call the id fonction -->
+                        <button id="{{ product.id }}" class="btn plus1 btn-success"> Ajouter</button>
+                    </div>
+                </div>  
+            </div>
         {% endfor %}
     </div>
 
